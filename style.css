@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.sky {
+    background-image: url('./background.jpg');
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+#btn {
+        padding: 2px;
+        width: 87px;
+        height: 37px;
+        border-radius: 5px;
+        background-color: #95c4f0;
+        font-weight: bolder;
+}
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tree {
+    background-image: url('./trees.png');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.track {
+    background-image: url('./track.png');
+    background-repeat: repeat-x;
+    width: 325vw;
+    height: 50vh;
+    position: absolute;
+    top: 90vh;
+}
+#track {
+    background-image: url('./track.png');
+    background-repeat: repeat-x;
+    width: 325vw;
+    height: 50vh;
+    position: absolute;
+    top: 90vh;
+    animation: trackRotation linear 2s infinite;
+}
+
+.car {
+    width: 380px;
+    height: 100px;
+    background-image: url(./car_body.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 285px;
+    bottom: 9vh;
+}
+#car {
+    width: 380px;
+    height: 100px;
+    background-image: url(./car_body.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 285px;
+    bottom: 9vh;
+    animation: carmove linear 1.5s infinite;
+}
+
+.wheel1 img {
+    position: relative;
+    width: 68px;
+    height: 71px;
+    top: 43px;
+    left: 48px;
+}
+#wheel11 img {
+    position: relative;
+    width: 68px;
+    height: 71px;
+    top: 43px;
+    left: 48px;
+    animation: wheelRotation linear .3s infinite;
+}
+
+.wheel2 img {
+    position: relative;
+    width: 69px;
+    top: -31px;
+    height: 67px;
+    left: 239px;
+}
+#wheel12 img {
+    position: relative;
+    width: 69px;
+    top: -31px;
+    height: 67px;
+    left: 239px;
+    animation: wheelRotation linear .3s infinite;
+}
+
+@keyframes wheelRotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes trackRotation {
+    100% {
+        transform: translateX(-500vh);
+    }
+}
+
+@keyframes carmove {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
